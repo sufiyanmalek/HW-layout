@@ -1,126 +1,93 @@
 * {
-  margin: 0;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 body {
+  padding: 0;
   margin: 0;
+  background-color: #faebd7;
 }
 
-.container {
-  box-sizing: border-box;
-  width: 100vw;
-  height: 100vh;
-}
-
-.nav {
-  background-color: rgb(61, 61, 61);
-  margin: 1em;
-
-}
-
-.nav ul {
-  list-style: none;
-  display: flex;
-}
-
-.nav ul li {
-  padding: 10px;
-}
-
-a {
-  color: rgb(255, 255, 255);
-  text-decoration: none;
-}
-
-.main {
-  margin: 1em;
+section {
+  padding: 20px;
   display: grid;
-  gap: 5px;
-  height: fit-content;
-  border: 2px solid black;
-  border-radius: 5px;
-
+  grid-template-columns: auto;
+  gap: 20px;
 }
 
-.head {
+.Card {
+  height: max-content;
+  width: auto;
+  border-radius: 10px;
+  background-color: #eeeeee;
+  padding: 20px;
+}
+.CardSec1 {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.CardSec2 {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.Image1 {
+  height: 70px;
+  width: 70px;
+  overflow: hidden;
+  border-radius: 100%;
+  border: 2px solid #1a8c8c;
+}
+.Image1 img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.Image2 {
+  height: 60px;
+  width: 60px;
+  overflow: hidden;
+  border-radius: 15px;
+  border: 2px solid #1a8c8c;
+}
+.Image2 img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+strong {
+  color: #379999;
+}
+.More {
+  width: 100%;
   text-align: center;
-  color: rgb(255, 255, 255);
-  background-color: rgb(61, 61, 61);
-
 }
 
-.body {
-  text-align: center;
+.More a {
+  color: #5c4e45 !important;
 }
 
-.details p {
-  line-height: 20px;
-}
-
-.details {
-  padding: 10px;
-  margin: 5px;
-  background-color: gray;
-  border-radius: 5px;
-
-}
-.details:hover{
-  position: relative;
-  bottom: 5px;
-  box-shadow: 5px 5px 5px rgb(46, 46, 46);
-
-}
-.nav ul li:hover 
-  {
-    background-color: gray;
-  }
-
-@media only screen and (min-width: 900px) {
-  .container {
-    display: flex;
-  }
-  .nav ul
-  {
-    display: flex;
-    flex-direction: column;
-    margin: 0;
-    gap: 10px;
-  }
-  .nav ul li {
-    background-color: rgb(61, 61, 61);
-    border-radius: 5px;
-  }
-  .nav {
-    flex: 25%;
-    height: fit-content;
-    background-color: transparent;
-
-  }
-  a 
-  {
-    color: white;
-  }
-
-  .head
-  {
-    height: fit-content;
-    padding: 10px;
-  }
-  .main {
-    flex: 75%;
-    display: flex;
-    flex-direction: column;
-  }
-  .body{
-    display: grid;
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  section {
+    padding: 20px 50px;
     grid-template-columns: auto auto;
-  } 
+  }
 }
 
-@media only screen and (min-width: 1400px)
-{
-  .body{
-    display: grid;
+@media only screen and (min-width: 1025px) {
+  section {
+    padding: 20px 50px;
     grid-template-columns: auto auto auto;
-  } 
-} 
+  }
+}
